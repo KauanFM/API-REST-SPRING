@@ -28,4 +28,9 @@ public class Usuario {
     @Column(unique = true)
     private String usuario;
 
+    public Usuario(UsuarioRecord usuarioRecord) {
+        this.id = usuarioRecord.id();
+        this.usuario = usuarioRecord.usuario();
+    }
+
 }
